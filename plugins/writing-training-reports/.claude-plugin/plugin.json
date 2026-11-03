@@ -1,0 +1,8 @@
+{
+  "name": "writing-training-reports",
+  "version": "0.2.0",
+  "description": "Writes daily or weekly training report emails from your notes and saves them as a Gmail draft.",
+  "author": { "name": "GraphicDThanh" },
+  "repository": "https://github.com/GraphicDThanh/soft-mornings",
+  "keywords": ["training", "report", "gmail", "draft"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "soft-mornings-kit",
+  "owner": { "name": "GraphicDThanh" },
+  "metadata": {
+    "description": "Small morning-routine skills: email digest, training reports",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "email-digest",
+      "source": "./plugins/email-digest",
+      "description": "Weekday morning digest of your company Gmail (read-only), posted as one Slack DM or as the run's reply.",
+      "version": "0.2.0",
+      "category": "productivity",
+      "keywords": ["email", "gmail", "digest", "slack", "morning"]
+    },
+    {
+      "name": "writing-training-reports",
+      "source": "./plugins/writing-training-reports",
+      "description": "Writes daily or weekly training report emails from your notes and saves them as a Gmail draft.",
+      "version": "0.2.0",
+      "category": "productivity",
+      "keywords": ["training", "report", "gmail", "draft"]
+    }
+  ]
+}

@@ -2,10 +2,10 @@
 
 `soft-mornings-kit`: a small Claude plugin marketplace for morning-routine skills.
 
-| Plugin | What |
-|--------|------|
-| [email-digest](plugins/email-digest/README.md) | Weekday morning digest of your company Gmail, posted as a Slack DM |
-| [writing-training-reports](plugins/writing-training-reports/README.md) | Daily or weekly training report emails saved as a Gmail draft |
+| Plugin | What | Guide |
+|--------|------|-------|
+| [email-digest](plugins/email-digest/README.md) | Weekday morning digest of your company Gmail, posted as a Slack DM | [Artifact](https://claude.ai/artifact/49dYkj3dBrg13cqAK9HSeo) |
+| [writing-training-reports](plugins/writing-training-reports/README.md) | Daily or weekly training report emails saved as a Gmail draft | [Artifact](https://claude.ai/artifact/Ls7AqENKvcMyG9nfERHWqU) |
 
 ## Claude Code (CLI, desktop Code tab, IDE)
 

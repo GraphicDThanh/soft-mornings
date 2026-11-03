@@ -2,6 +2,8 @@
 
 Claude Code plugin with one skill that builds a weekday morning digest of your company Gmail (read-only) and posts it as one Slack DM, or as the run's own reply when Slack is not connected.
 
+Interactive guide (setup, prompt generator, digest preview): [Email Digest Guide](https://claude.ai/artifact/49dYkj3dBrg13cqAK9HSeo)
+
 ## Requirements
 
 - Gmail connector (read-only)

@@ -2,6 +2,8 @@
 
 Claude Code plugin with one skill that writes daily or weekly training report emails (subject `[team][training] YYYYMMDD` plus hashtags) from your notes and saves them as a Gmail draft.
 
+Interactive guide (setup, example report, commands): [Training Report Guide](https://claude.ai/artifact/Ls7AqENKvcMyG9nfERHWqU)
+
 ## Requirements
 
 - Gmail connector (to create drafts)

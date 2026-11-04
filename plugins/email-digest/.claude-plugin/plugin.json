@@ -1,6 +1,6 @@
 {
   "name": "email-digest",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Weekday morning digest of your company Gmail (read-only), posted as one Slack DM or as the run's reply.",
   "author": { "name": "GraphicDThanh" },
   "repository": "https://github.com/GraphicDThanh/soft-mornings",

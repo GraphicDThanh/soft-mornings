@@ -111,10 +111,30 @@ Needs mentee prefixes or a report prefix; use whichever are set, hide if neither
 (subject:<p1> OR subject:<p2> ...) (to:me OR cc:me) -from:me after:<day>
 ```
 
-Keep a thread if it passes Step 1 and the subject starts with `[<mentee prefix>]` or the
-report prefix (team prefix, optional space, `[training]`, e.g. `[team] [training]`). Label it:
+Keep a thread if it passes Step 1 and its subject matches:
+- Normalize the subject: strip leading `Re:`/`Fwd:`/`Fw:`, lowercase, remove spaces between
+  brackets (`[bgh] [training]` = `[bgh][training]`).
+- Match if it starts with the normalized report prefix or `[<mentee prefix>]`.
+- The user in To OR Cc of any message counts, even when the main recipient is someone else
+  (e.g. the sender's supporter).
+- 🫂 is decided before 📊: a matching thread never goes to 📊, even if Cc'd to the training group.
+
+Label it:
 - first message from the user → "reply to your report"
 - otherwise → the sender's report or request (e.g. "daily report Oct 30, #reading")
+
+**Your report** (only if the report prefix is set):
+
+```
+subject:training from:me after:<day>
+```
+
+Keep a thread if the user's first in-window message (`start` ≤ date < `end`) has a subject
+matching the report prefix (normalized, not `Re:`) and the thread isn't already in 🫂 via
+someone else's in-window reply (then keep only the "reply to your report" line; one line per
+thread). This is the only exception to Step 1's "message not from the user" rule.
+- Line: gist `Your report: <gist>`, sender `you`. Always the LAST line of 🫂, counts toward the
+  🫂 count, never pushed into `+N more`.
 
 ### 📊 Training Pulse (plans and issues, so the user can help)
 
@@ -131,6 +151,16 @@ and discard the rest from your notes.
 
 The 🙋 and 🧩 lists below form one list, **Issues**, inside Training Pulse (🙋 first, then 🧩), one
 line each as in Step 3:
+
+🙋/🧩 come ONLY from the ISSUES / ISSUES-QUESTIONS and IN PROGRESS sections. Ignore greetings,
+intro sentences and sign-offs (e.g. "please find my report below for your review", "any
+feedback is welcome"). "Waiting for review" counts only when a specific item (PR/MR, code
+task, document, link) is named as waiting; a general "for your review" of the report itself
+never counts.
+
+Your own report: read it with `get_thread` (`PLAIN_TEXT`, the user's message only), extract
+ISSUES the same way; any real issue goes as the LAST line of Issues, sender `you`. Not counted
+in the pulse report count `c`.
 
 - **🙋 Can you help?** Technical blockers and open questions anyone could help with (stuck,
   asks for help, feedback or an answer), plus IN PROGRESS items waiting for a review. Skip
@@ -176,8 +206,8 @@ as it shows (template, counts, title date, window, hide rules).
 ## Safety rules (must follow)
 
 - **Gmail is read-only.** Allowed Gmail tools: `search_threads`, `get_thread`, `list_labels`.
-  Use summary/metadata views; open a full body only for 📊 reports, or when a gist can't be
-  written from the subject and snippet.
+  Use summary/metadata views; open a full body only for 📊 reports and the user's own report,
+  or when a gist can't be written from the subject and snippet.
 - **Forbidden Gmail tools, always:** `send_message`, `reply`, `forward`, `create_draft`,
   `update_draft`, `delete_draft`, `label_*`, `unlabel_*`, `update_message_labels`,
   `create_label`, `update_label`, `delete_label`, `trash_*`, `untrash_*`, `mark_*_spam`,

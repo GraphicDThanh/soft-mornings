@@ -10,7 +10,7 @@
       "name": "email-digest",
       "source": "./plugins/email-digest",
       "description": "Weekday morning digest of your company Gmail (read-only), posted as one Slack DM or as the run's reply.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "productivity",
       "keywords": ["email", "gmail", "digest", "slack", "morning"]
     },

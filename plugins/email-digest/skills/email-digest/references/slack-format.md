@@ -17,11 +17,13 @@ _+<N> more_
 
 :people_hugging: My People (<count>)
 • <gist> - <sender> · [open](<viewUrl>)
+• Your report: <gist> - you · [open](<viewUrl>)
 
 :bar_chart: Training Pulse | <c> Reports
 
 Issues (<count>)
 • <blocker, question, waiting item, or issue> - <sender> · [open](<viewUrl>)
+• <your issue> - you · [open](<viewUrl>)
 
 Current Focus
 • <theme>: <n>
@@ -36,7 +38,8 @@ Milestones
 - `[open](<viewUrl>)` is the last thing on an item line.
 - Title date: scheduled run → today (e.g. `Tue, Nov 3`). Manual run with `end` = now → the
   next weekday's date plus ` (Preview)`.
-- Counts (on the title line): `u` = 🫂 items, `a` = 🎯 items (incl. ⏳), `c` = pulse reports.
+- Counts (on the title line): `u` = 🫂 items (incl. the user's own report line), `a` = 🎯
+  items (incl. ⏳), `c` = pulse reports (not the user's own).
   Singular for 1 ("1 action"). Drop a part that is 0, and its ` | ` if all are 0. A hidden
   section counts as 0, so its part is dropped (e.g. no "training reports" when 📊 is off).
 - 🎯 Needs Attention = approvals and admin, then the ⏳ items as plain `•` lines (no
